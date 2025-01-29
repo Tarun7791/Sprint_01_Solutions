@@ -1,0 +1,64 @@
+// Q.1 Write a program to check whether a number is even or odd.
+
+package Sprint_01_solutions;
+import java.util.Scanner;
+
+public class PROBLEM_01 {
+    public static void main(String[] args) {
+
+        Scanner kb=new Scanner(System.in);
+        int a;
+        System.out.println("Enter the number");
+        a=kb.nextInt();
+
+        if(a==0){
+            System.out.println("Zero is neither even nor odd");
+        }
+        else if (a%2==0) {
+            System.out.println("It is a even no.");
+
+        }
+        else {
+            System.out.println("It is a odd no.");
+        }
+    }
+}
+
+
+// Q.2 Write a program to determine if a number is prime
+
+package Sprint_01_solutions;
+import java.util.Scanner;
+
+public class PROBLEM_02 {
+    public static void main(String[] args) {
+
+        Scanner kb=new Scanner(System.in);
+        int a;
+        System.out.println("Enter a number to check it is a prime no. or not ");
+        a=kb.nextInt();
+
+        boolean isPrime=true;
+
+        if(a>=1){
+            isPrime=false;
+        }
+        else {
+            for (int i = 2; i < a; i++) {
+
+                if (a % 2 == 0) {
+                    isPrime = false;
+                    break;
+                }
+
+            }
+        }
+
+        if(isPrime){
+            System.out.println("It is a prime number");
+        }
+        else {
+            System.out.println("It is not a prime number");
+        }
+    }
+}
